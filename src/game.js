@@ -109,7 +109,7 @@ export default class Game {
     this.platforms = [
       new Platform({
         canvas: this.canvasContext,
-        x: -1,
+        x: 0,
         y: 470,
         image: plateFormImage,
       }),
@@ -118,14 +118,14 @@ export default class Game {
     this.genericObjects = [
       new GenericObject({
         canvas: this.canvasContext,
-        x: -1,
-        y: -1,
+        x: 0,
+        y: 0,
         image: backgroundImage,
       }),
       new GenericObject({
         canvas: this.canvasContext,
-        x: -1,
-        y: -1,
+        x: 0,
+        y: 0,
         image: hillsImage,
       }),
     ];
