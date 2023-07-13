@@ -273,24 +273,7 @@ export default class Game {
     ) {
       this.player.currentSprite = this.player.sprites.stand.right;
       this.player.currentCropWidth = this.player.sprites.stand.cropWidth;
-    } else if (
-        this.keys.left.pressed &&
-        this.lastKey !== "left" &&
-        this.player.currentSprite !== this.player.sprites.run.left
-    ) {
-        this.player.currentSprite = this.player.sprites.run.left;
-        this.player.currentCropWidth = this.player.sprites.run.cropWidth;
-        this.player.width = this.player.sprites.run.width;
-    } else if (
-        this.keys.right.pressed &&
-        this.lastKey !== "right" &&
-        this.player.currentSprite !== this.player.sprites.run.right
-    ) {
-        this.player.currentSprite = this.player.sprites.run.right;
-        this.player.currentCropWidth = this.player.sprites.run.cropWidth;
-        this.player.width = this.player.sprites.run.width;
-    }
-
+    } 
     // 승리 조건
     if (this.scrollOffset > plateFormImage.width * 5 + 300 - 2) {
       console.log("game win");
