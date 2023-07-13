@@ -227,6 +227,8 @@ export default class Game {
                 });
             }
         }
+    } else {
+        this.player.velocity.x = 0;
     }
 
     // 플랫폼과 충돌 시
