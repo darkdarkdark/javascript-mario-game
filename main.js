@@ -156,42 +156,7 @@ function init() {
   player = new Player();
 
   platforms = [
-      new Platform({
-      x:
-        plateFormImage.width * 4 +
-        300 -
-        2 +
-        plateFormImage.width -
-        plateFormSmallImage.width,
-      y: 270,
-      image: plateFormSmallImage,
-    }),
     new Platform({ x: -1, y: 470, image: plateFormImage }),
-    new Platform({
-      x: plateFormImage.width - 3,
-      y: 470,
-      image: plateFormImage,
-    }),
-    new Platform({
-      x: plateFormImage.width * 2 + 100,
-      y: 470,
-      image: plateFormImage,
-    }),
-    new Platform({
-      x: plateFormImage.width * 3 + 300,
-      y: 470,
-      image: plateFormImage,
-    }),
-    new Platform({
-      x: plateFormImage.width * 4 + 300 - 2,
-      y: 470,
-      image: plateFormImage,
-    }),
-    new Platform({
-      x: plateFormImage.width * 5 + 700 - 2,
-      y: 470,
-      image: plateFormImage,
-    }),
   ];
 
   genericObjects = [
