@@ -132,25 +132,25 @@ export default class Game {
       }),
       new Platform({
         canvas: this.canvasContext,
-        x: plateFormImage.width * 2 + 100,
+        x: plateFormImage.width * 2 + 150,
         y: 470,
         image: plateFormImage,
       }),
       new Platform({
         canvas: this.canvasContext,
-        x: plateFormImage.width * 3 + 300,
+        x: plateFormImage.width * 3 + 350,
         y: 470,
         image: plateFormImage,
       }),
       new Platform({
         canvas: this.canvasContext,
-        x: plateFormImage.width * 4 + 300 - 2,
+        x: plateFormImage.width * 4 + 350 - 2,
         y: 470,
         image: plateFormImage,
       }),
       new Platform({
         canvas: this.canvasContext,
-        x: plateFormImage.width * 5 + 700 - 2,
+        x: plateFormImage.width * 5 + 750 - 2,
         y: 470,
         image: plateFormImage,
       }),
@@ -275,7 +275,7 @@ export default class Game {
       this.player.currentCropWidth = this.player.sprites.stand.cropWidth;
     } 
     // 승리 조건
-    if (this.scrollOffset > plateFormImage.width * 5 + 300 - 2) {
+    if (this.scrollOffset > plateFormImage.width * 5 + 350 - 2) {
       console.log("game win");
     }
 
