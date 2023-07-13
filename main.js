@@ -172,22 +172,22 @@ function init() {
       image: plateFormImage,
     }),
     new Platform({
-      x: plateFormImage.width * 2 + 100,
+      x: plateFormImage.width * 2 + 500,
       y: 470,
       image: plateFormImage,
     }),
     new Platform({
-      x: plateFormImage.width * 3 + 300,
+      x: plateFormImage.width * 3 + 700,
       y: 470,
       image: plateFormImage,
     }),
     new Platform({
-      x: plateFormImage.width * 4 + 300,
+      x: plateFormImage.width * 4 + 700,
       y: 470,
       image: plateFormImage,
     }),
     new Platform({
-      x: plateFormImage.width * 5 + 700,
+      x: plateFormImage.width * 5 + 1100,
       y: 470,
       image: plateFormImage,
     }),
