@@ -361,7 +361,7 @@ addEventListener("keyup", ({ keyCode }) => {
       break;
     case 87:
       console.log("up");
-      player.velocity.y -= 10;
+      // player.velocity.y -= 10;
       break;
   }
 });
