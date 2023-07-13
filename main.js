@@ -159,16 +159,15 @@ function init() {
     new Platform({
       x:
         plateFormImage.width * 4 +
-        300 -
-        2 +
+        300 +
         plateFormImage.width -
         plateFormSmallImage.width,
       y: 270,
       image: plateFormSmallImage,
     }),
-    new Platform({ x: -1, y: 470, image: plateFormImage }),
+    new Platform({ x: 0, y: 470, image: plateFormImage }),
     new Platform({
-      x: plateFormImage.width - 3,
+      x: plateFormImage.width,
       y: 470,
       image: plateFormImage,
     }),
@@ -183,12 +182,12 @@ function init() {
       image: plateFormImage,
     }),
     new Platform({
-      x: plateFormImage.width * 4 + 300 - 2,
+      x: plateFormImage.width * 4 + 300,
       y: 470,
       image: plateFormImage,
     }),
     new Platform({
-      x: plateFormImage.width * 5 + 700 - 2,
+      x: plateFormImage.width * 5 + 700,
       y: 470,
       image: plateFormImage,
     }),
@@ -196,13 +195,13 @@ function init() {
 
   genericObjects = [
     new GenericObject({
-      x: -1,
-      y: -1,
+      x: 0,
+      y: 0,
       image: backgroundImage,
     }),
     new GenericObject({
-      x: -1,
-      y: -1,
+      x: 0,
+      y: 0,
       image: hillsImage,
     }),
   ];
