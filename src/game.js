@@ -113,6 +113,24 @@ export default class Game {
         y: 470,
         image: plateFormImage,
       }),
+      new Platform({
+        canvas: this.canvasContext,
+        x : plateFormImage.width,
+        y : 470,
+        image: plateFormImage,
+      }),
+      new Platform({
+        canvas: this.canvasContext,
+        x : plateFormImage.width * 2 + 200,
+        y : 470,
+        image: plateFormImage,
+      }),
+      new Platform({
+        canvas: this.canvasContext,
+        x : plateFormImage.width * 3 + 200,
+        y : 470,
+        image: plateFormImage,
+      }),
     ];
 
     this.genericObjects = [
