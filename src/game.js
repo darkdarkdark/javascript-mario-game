@@ -109,41 +109,63 @@ export default class Game {
     this.platforms = [
       new Platform({
         canvas: this.canvasContext,
-        x: 0,
+        x:
+          plateFormImage.width * 4 +
+          300 -
+          2 +
+          plateFormImage.width -
+          plateFormSmallImage.width,
+        y: 270,
+        image: plateFormSmallImage,
+      }),
+      new Platform({
+        canvas: this.canvasContext,
+        x: -1,
         y: 470,
         image: plateFormImage,
       }),
       new Platform({
         canvas: this.canvasContext,
-        x : plateFormImage.width,
-        y : 470,
+        x: plateFormImage.width - 3,
+        y: 470,
         image: plateFormImage,
       }),
       new Platform({
         canvas: this.canvasContext,
-        x : plateFormImage.width * 2 + 200,
-        y : 470,
+        x: plateFormImage.width * 2 + 100,
+        y: 470,
         image: plateFormImage,
       }),
       new Platform({
         canvas: this.canvasContext,
-        x : plateFormImage.width * 3 + 200,
-        y : 470,
+        x: plateFormImage.width * 3 + 300,
+        y: 470,
+        image: plateFormImage,
+      }),
+      new Platform({
+        canvas: this.canvasContext,
+        x: plateFormImage.width * 4 + 300 - 2,
+        y: 470,
+        image: plateFormImage,
+      }),
+      new Platform({
+        canvas: this.canvasContext,
+        x: plateFormImage.width * 5 + 700 - 2,
+        y: 470,
         image: plateFormImage,
       }),
     ];
-
     this.genericObjects = [
       new GenericObject({
         canvas: this.canvasContext,
-        x: 0,
-        y: 0,
+        x: -1,
+        y: -1,
         image: backgroundImage,
       }),
       new GenericObject({
         canvas: this.canvasContext,
-        x: 0,
-        y: 0,
+        x: -1,
+        y: -1,
         image: hillsImage,
       }),
     ];
