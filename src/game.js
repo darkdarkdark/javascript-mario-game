@@ -198,34 +198,35 @@ export default class Game {
     this.player.update();
 
     // 플레이어 x좌표 이동 설정
-    if (this.keys.right.pressed && this.player.position.x < 400) {
-      this.player.velocity.x = this.player.speed;
-    } else if (
-      (this.keys.left.pressed && this.player.position.x > 100) ||
-      (this.keys.left.pressed &&
-        this.scrollOffset === 0 &&
-        this.player.position.x > 0)
-    ) {
-      this.player.velocity.x = -this.player.speed;
-    } else {
-      this.player.velocity.x = 0;
-      if (this.keys.right.pressed) {
-        this.scrollOffset += this.player.speed;
-        this.platforms.forEach((platform) => {
-          platform.position.x -= this.player.speed;
-        });
-        this.genericObjects.forEach((genericObject) => {
-          genericObject.position.x -= this.player.speed * 0.66;
-        });
-      } else if (this.keys.left.pressed && this.scrollOffset > 0) {
-        this.scrollOffset -= this.player.speed;
-        this.platforms.forEach((platform) => {
-          platform.position.x += this.player.speed;
-        });
-        this.genericObjects.forEach((genericObject) => {
-          genericObject.position.x += this.player.speed * 0.66;
-        });
-      }
+    if (this.keys.right.pressed && !this.keys.left.pressed) {
+        if (this.player.position.x < 400) {
+            this.player.velocity.x = this.player.speed;
+        } else {
+            this.player.velocity.x = 0;
+            this.scrollOffset += this.player.speed;
+            this.platforms.forEach((platform) => {
+                platform.position.x -= this.player.speed;
+            });
+            this.genericObjects.forEach((genericObject) => {
+                genericObject.position.x -= this.player.speed * 0.66;
+            });
+        }
+    } else if (this.keys.left.pressed && !this.keys.right.pressed) {
+        if (this.player.position.x > 100 ||
+            (this.scrollOffset === 0 && this.player.position.x > 0)) {
+            this.player.velocity.x = -this.player.speed;
+        } else {
+            if (this.scrollOffset > 0) {
+                this.player.velocity.x = 0;
+                this.scrollOffset -= this.player.speed;
+                this.platforms.forEach((platform) => {
+                    platform.position.x += this.player.speed;
+                });
+                this.genericObjects.forEach((genericObject) => {
+                    genericObject.position.x += this.player.speed * 0.66;
+                });
+            }
+        }
     }
 
     // 플랫폼과 충돌 시
