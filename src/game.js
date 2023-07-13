@@ -132,25 +132,25 @@ export default class Game {
       }),
       new Platform({
         canvas: this.canvasContext,
-        x: plateFormImage.width * 2 + 150,
+        x: plateFormImage.width * 2 + 100,
         y: 470,
         image: plateFormImage,
       }),
       new Platform({
         canvas: this.canvasContext,
-        x: plateFormImage.width * 3 + 350,
+        x: plateFormImage.width * 3 + 300,
         y: 470,
         image: plateFormImage,
       }),
       new Platform({
         canvas: this.canvasContext,
-        x: plateFormImage.width * 4 + 350 - 2,
+        x: plateFormImage.width * 4 + 300 - 2,
         y: 470,
         image: plateFormImage,
       }),
       new Platform({
         canvas: this.canvasContext,
-        x: plateFormImage.width * 5 + 750 - 2,
+        x: plateFormImage.width * 5 + 700 - 2,
         y: 470,
         image: plateFormImage,
       }),
@@ -252,7 +252,6 @@ export default class Game {
       this.player.frames = 1;
       this.player.currentSprite = this.player.sprites.run.right;
       this.player.currentCropWidth = this.player.sprites.run.cropWidth;
-      this.player.width = this.player.sprites.run.width;
     } else if (
       this.keys.left.pressed &&
       this.lastKey === "left" &&
@@ -260,7 +259,6 @@ export default class Game {
     ) {
       this.player.currentSprite = this.player.sprites.run.left;
       this.player.currentCropWidth = this.player.sprites.run.cropWidth;
-      this.player.width = this.player.sprites.run.width;
     } else if (
       !this.keys.left.pressed &&
       this.lastKey === "left" &&
@@ -268,7 +266,6 @@ export default class Game {
     ) {
       this.player.currentSprite = this.player.sprites.stand.left;
       this.player.currentCropWidth = this.player.sprites.stand.cropWidth;
-      this.player.width = this.player.sprites.stand.width;
     } else if (
       !this.keys.right.pressed &&
       this.lastKey === "right" &&
@@ -276,7 +273,6 @@ export default class Game {
     ) {
       this.player.currentSprite = this.player.sprites.stand.right;
       this.player.currentCropWidth = this.player.sprites.stand.cropWidth;
-      this.player.width = this.player.sprites.stand.width;
     }
 
     // 승리 조건
