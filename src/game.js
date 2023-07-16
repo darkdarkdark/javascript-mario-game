@@ -252,6 +252,7 @@ export default class Game {
       this.player.frames = 1;
       this.player.currentSprite = this.player.sprites.run.right;
       this.player.currentCropWidth = this.player.sprites.run.cropWidth;
+      this.player.width = this.player.sprites.run.width;
     } else if (
       this.keys.left.pressed &&
       this.lastKey === "left" &&
@@ -259,6 +260,7 @@ export default class Game {
     ) {
       this.player.currentSprite = this.player.sprites.run.left;
       this.player.currentCropWidth = this.player.sprites.run.cropWidth;
+      this.player.width = this.player.sprites.run.width;
     } else if (
       !this.keys.left.pressed &&
       this.lastKey === "left" &&
@@ -266,6 +268,7 @@ export default class Game {
     ) {
       this.player.currentSprite = this.player.sprites.stand.left;
       this.player.currentCropWidth = this.player.sprites.stand.cropWidth;
+      this.player.width = this.player.sprites.stand.width;
     } else if (
       !this.keys.right.pressed &&
       this.lastKey === "right" &&
@@ -273,6 +276,7 @@ export default class Game {
     ) {
       this.player.currentSprite = this.player.sprites.stand.right;
       this.player.currentCropWidth = this.player.sprites.stand.cropWidth;
+      this.player.width = this.player.sprites.stand.width;
     } 
     // 승리 조건
     if (this.scrollOffset > plateFormImage.width * 5 + 350 - 2) {
