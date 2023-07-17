@@ -111,7 +111,7 @@ export default class Game {
         canvas: this.canvasContext,
         x:
           plateFormImage.width * 4 +
-          300 -
+          350 -
           2 +
           plateFormImage.width -
           plateFormSmallImage.width,
